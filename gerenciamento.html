@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciar Produto</title>
+    <link rel="icon" type="image/png" href="img/logo_icon.png">
+    <link rel="stylesheet" href="styles/gerenciamento_styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Gerenciar Produto</h2>
+            <a href="index.html">
+                <img src="img/back_arrow.png" alt="Voltar" class="back-button">
+            </a>
+        </div>
+
+        <form action="gerenciar.php" method="post">
+            <label for="codigo">Código do Produto:</label>
+            <input type="text" id="codigo" name="codigo" required>
+
+            <label for="acao">Ação:</label>
+            <select id="acao" name="acao">
+                <option value="adicionar">Adicionar Estoque</option>
+                <option value="reduzir">Reduzir Estoque</option>
+                <option value="consultar">Consultar Estoque</option>
+                <option value="exibir">Exibir Produto</option>
+                <option value="imposto">Calcular Imposto</option>
+                <option value="desconto">Aplicar Desconto</option>
+            </select>
+
+            <label for="valor">Quantidade / Percentual:</label>
+            <input type="number" id="valor" name="valor" step="0.01">
+
+            <button type="submit">Executar Ação</button>
+        </form>
+    </div>
+</body>
+</html>
